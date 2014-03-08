@@ -1,10 +1,10 @@
 --[[
 	Hat demonstration script
-	Created by Jman100 (with a little help from Philpax)
+	Created by Jman100
 --]]
 
 hatcount = 0
-enabled = false
+enabled = true
 player_hats = {} -- Create a table for storing created hats (ClientStaticObjects)
 
 -- Table of hat models (This is only a small list, more are available)
@@ -157,7 +157,7 @@ end
 Events:Subscribe("Render", RenderTick)
 Events:Subscribe("KeyDown", KDown)
 Events:Subscribe("LocalPlayerChat", LocalPlayerChat)
-Events:Subscribe("PlayerValueChange", PlayerValueChange)
+Events:Subscribe("PlayerNetworkValueChange", PlayerValueChange)
 
 Events:Subscribe("EntitySpawn", EntitySpawn)
 Events:Subscribe("EntityDespawn", EntityDespawn)
