@@ -1,6 +1,6 @@
 --[[
 	Hat demonstration script
-	Created by Jman100
+	Created by Jman100 (with a little help from Philpax)
 --]]
 
 hatcount = 0
