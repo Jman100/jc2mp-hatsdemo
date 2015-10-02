@@ -92,7 +92,7 @@ end
 
 function DestroyHat(player)
 	if player_hats[player:GetId()] ~= nil then
-		if IsValid( player_hats[player:GetId()] ) then
+		if IsValid( player_hats[player:GetId()], false ) then
 			player_hats[player:GetId()]:Remove()
 		end
 		player_hats[player:GetId()] = nil
@@ -147,7 +147,7 @@ end
 -- Remove the hat when the script is unloaded (or player disconnects)
 function ModuleUnload()
 	for k, v in pairs(player_hats) do
-		if IsValid(v) then
+		if IsValid(v, false) then
 			v:Remove()
 		end
 	end
